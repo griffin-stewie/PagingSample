@@ -7,6 +7,9 @@
 //
 
 #import "SampleViewController.h"
+
+#import "TouchDetectScrollView.h"
+
 #import "DummyView.h"
 
 #define SPACE_WIDTH 20
@@ -27,7 +30,7 @@
     v.backgroundColor = [UIColor grayColor];
 
     CGRect frame = CGRectMake(SPACE_WIDTH * 1.5, 0, v.frame.size.width - SPACE_WIDTH * 3, 460);
-    self.scrollView = [[[UIScrollView alloc] initWithFrame:frame] autorelease];
+    self.scrollView = [[[TouchDetectScrollView alloc] initWithFrame:frame] autorelease];
     self.scrollView.clipsToBounds = NO;
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsHorizontalScrollIndicator = NO;
